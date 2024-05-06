@@ -24,5 +24,4 @@ jobs:
                   server: ftp.leandroaps.com.br
                   username: leandroaps
                   password: ${{ secrets.ftp_password }}
-                  protocol: ftps
-                  server-dir: leandroaps.com.br/web/
+                  server-dir: ./leandroaps.com.br/web/
