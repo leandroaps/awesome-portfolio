@@ -25,4 +25,4 @@ jobs:
                   username: leandroaps
                   password: ${{ secrets.password }}
                   protocol: ftps
-                  local-dir: leandroaps.com.br/web/
+                  localDir: leandroaps.com.br/web/
