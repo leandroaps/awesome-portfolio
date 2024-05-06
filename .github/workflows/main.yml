@@ -25,4 +25,3 @@ jobs:
                   username: leandroaps
                   password: ${{ secrets.ftp_password }}
                   server-dir: ./leandroaps.com.br/web/
-                  port: 6784
