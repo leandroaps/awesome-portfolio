@@ -15,12 +15,11 @@ function Home() {
             <div className="home-content">
                 <div className="row home-content__main">
                     <h3>Hello There</h3>
-
-                    <h1>
-                        I am Jonathan Doe. <br />
-                        I am a graphic & UI/UX <br />
-                        designer based in Somewhere.
-                    </h1>
+                    <h1>I am Leandro A. Siqueira.</h1>
+                    <h2>
+                        I am a Front-end Developer focused on React <br />
+                        based in São Paulo, Brazil.
+                    </h2>
 
                     <div className="home-content__buttons">
                         <a href="#works" className="smoothscroll btn btn--stroke">

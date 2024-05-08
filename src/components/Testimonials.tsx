@@ -30,7 +30,7 @@ function Testimonials() {
 
                     <div className="testimonials__slide">
                         <img
-                            src="../assets/images/avatars/user-05.jpg"
+                            src="assets/images/avatars/user-05.jpg"
                             alt="Author image"
                             className="testimonials__avatar"
                         />
@@ -47,7 +47,7 @@ function Testimonials() {
 
                     <div className="testimonials__slide">
                         <img
-                            src="../assets/images/avatars/user-02.jpg"
+                            src="../assets/images/avatars/user-03.jpg"
                             alt="Author image"
                             className="testimonials__avatar"
                         />

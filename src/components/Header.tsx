@@ -3,7 +3,7 @@ function Header() {
         <header className="s-header">
             <div className="header-logo">
                 <a className="site-logo" href="index.html">
-                    <img src="./assets/images/logo.png" alt="Homepage" />
+                    leandroaps
                 </a>
             </div>
 

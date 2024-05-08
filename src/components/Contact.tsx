@@ -85,9 +85,7 @@ function Contacts() {
                                 </div>
                             </fieldset>
                         </form>
-                        /* contact-warning */
                         <div className="message-warning">Something went wrong. Please try again.</div>
-                        /* contact-success */
                         <div className="message-success">
                             Your message was sent, thank you!
                             <br />
