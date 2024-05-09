@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "commit": "git add . && git-cz",
+    "commit": "git-cz",
     "dev": "vite",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "lint:fix": "eslint --fix",
