@@ -9,6 +9,6 @@ describe('A truthy statement', () => {
 
     test('should render headline', () => {
         render(<App />);
-        expect(screen.getByText('Vite + React')).toBeInTheDocument();
+        expect(screen.getByText('leandroaps')).toBeInTheDocument();
     });
 });
