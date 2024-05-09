@@ -1,18 +1,23 @@
+import React from 'react';
+import { AboutContextType, IAbout } from '../@types/about';
+import { PortfolioContext } from '../context';
 import Hello from './Hello';
 import Skills from './Skills';
 
-function About() {
+type Props = {
+    about: IAbout;
+};
+
+const About: React.FC<Props> = () => {
+    const { about } = React.useContext(PortfolioContext) as AboutContextType;
+
     return (
         <section id="about" className="s-about target-section">
             <div className="row narrow section-intro has-bottom-sep">
                 <div className="col-full text-center">
-                    <h3>About</h3>
-                    <h1>More About Me</h1>
-                    <p className="lead">
-                        Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis
-                        nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum
-                        non est in officia.
-                    </p>
+                    <h3>{about.title}</h3>
+                    <h1>{about.title}</h1>
+                    <p className="lead">{about.lead}</p>
                 </div>
             </div>
             <div className="row about-content">
@@ -23,19 +28,14 @@ function About() {
             <div className="row about-content about-content--buttons">
                 <div className="col-six tab-full left">
                     <a href="../assets/pdf/Profile.pdf" className="btn btn--primary full-width" download>
-                        Download My CV
-                    </a>
-                </div>
-                <div className="col-six tab-full right">
-                    <a href="#0" className="btn full-width">
-                        Hire Me Now
+                        {about.download}
                     </a>
                 </div>
             </div>
 
             <div className="row about-content about-content--timeline">
                 <div className="col-full text-center">
-                    <h3>My Work Experience.</h3>
+                    <h3> {about.myWork}</h3>
                 </div>
 
                 <div className="col-six tab-full left">
@@ -48,12 +48,7 @@ function About() {
                                 <h5>Lead Designer</h5>
                             </div>
                             <div className="timeline__desc">
-                                <p>
-                                    Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi
-                                    cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident
-                                    cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est
-                                    occaecat nisi.
-                                </p>
+                                <p>{about.lorem}</p>
                             </div>
                         </div>
 
@@ -65,12 +60,7 @@ function About() {
                                 <h5>Front-end Developer</h5>
                             </div>
                             <div className="timeline__desc">
-                                <p>
-                                    Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi
-                                    cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident
-                                    cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est
-                                    occaecat nisi incididunt.
-                                </p>
+                                <p>{about.lorem}</p>
                             </div>
                         </div>
                     </div>
@@ -86,12 +76,7 @@ function About() {
                                 <h5>Web Designer</h5>
                             </div>
                             <div className="timeline__desc">
-                                <p>
-                                    Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi
-                                    cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident
-                                    cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est
-                                    occaecat nisi.
-                                </p>
+                                <p>{about.lorem}</p>
                             </div>
                         </div>
 
@@ -103,12 +88,7 @@ function About() {
                                 <h5>Web Designer</h5>
                             </div>
                             <div className="timeline__desc">
-                                <p>
-                                    Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi
-                                    cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident
-                                    cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est
-                                    occaecat nisi incididunt.
-                                </p>
+                                <p>{about.lorem}</p>
                             </div>
                         </div>
                     </div>
@@ -116,6 +96,6 @@ function About() {
             </div>
         </section>
     );
-}
+};
 
 export default About;
