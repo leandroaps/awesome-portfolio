@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutContextType, IAbout } from '../@types/about';
+import { AboutContextType, IAbout, IHeader } from '../@types/about';
 
 export const PortfolioContext = React.createContext<AboutContextType | null>(null);
 
@@ -13,7 +13,54 @@ const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         lorem: 'Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.'
     });
 
-    return <PortfolioContext.Provider value={{ about }}>{children}</PortfolioContext.Provider>;
+    const [header] = React.useState<IHeader[]>([
+        {
+            active: true,
+            content: 'Home',
+            href: 'home',
+            title: 'Home',
+            id: 0
+        },
+        {
+            active: false,
+            content: 'About',
+            href: 'about',
+            title: 'About',
+            id: 1
+        },
+        {
+            active: false,
+            content: 'Works',
+            href: 'works',
+            title: 'Works',
+            id: 2
+        },
+        {
+            active: false,
+            content: 'Blog',
+            href: 'blog',
+            title: 'Blog',
+            id: 3
+        },
+        {
+            active: false,
+            content: 'Contact',
+            href: 'contact',
+            title: 'Contact',
+            id: 4
+        }
+    ]);
+
+    const setActive = (active: boolean) => {
+        alert('OK');
+        header.filter((item: IHeader) => {
+            if (item.href === id) {
+                item.active = active;
+            }
+        });
+    };
+
+    return <PortfolioContext.Provider value={{ about, header, setActive }}>{children}</PortfolioContext.Provider>;
 };
 
 export default PortfolioProvider;

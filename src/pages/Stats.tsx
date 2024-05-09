@@ -1,6 +1,8 @@
+import Section from '../templates/Section';
+
 function Stats() {
     return (
-        <section id="stats" className="s-stats">
+        <Section id="stats" className="s-stats">
             <div className="row block-1-4 block-tab-1-2 block-mob-full stats">
                 <div className="col-block stats__col">
                     <div className="stats__count">128</div>
@@ -24,7 +26,7 @@ function Stats() {
                     <h4>Happy Clients</h4>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 

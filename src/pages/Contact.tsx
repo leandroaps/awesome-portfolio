@@ -1,7 +1,9 @@
+import Section from '../templates/Section';
+
 function Contacts() {
     return (
         <>
-            <section id="contact" className="s-contact target-section">
+            <Section id="contact" className="s-contact">
                 <div className="overlay"></div>
 
                 <div className="row narrow section-intro">
@@ -106,7 +108,7 @@ function Contacts() {
                         </p>
                     </div>
                 </div>
-            </section>
+            </Section>
         </>
     );
 }

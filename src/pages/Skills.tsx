@@ -1,6 +1,8 @@
-function Header() {
+import ColSixTabFullRight from '../templates/ColSixTabFullRight';
+
+function Skills() {
     return (
-        <div className="col-six tab-full right">
+        <ColSixTabFullRight>
             <h3>I've Got Some skills.</h3>
 
             <ul className="skill-bars">
@@ -41,8 +43,8 @@ function Header() {
                     <strong>Angular</strong>
                 </li>
             </ul>
-        </div>
+        </ColSixTabFullRight>
     );
 }
 
-export default Header;
+export default Skills;

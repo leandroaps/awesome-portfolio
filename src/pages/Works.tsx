@@ -1,6 +1,8 @@
+import Section from '../templates/Section';
+
 function Works() {
     return (
-        <section id="works" className="s-works target-section">
+        <Section id="works" className="s-works">
             <div className="row narrow section-intro has-bottom-sep">
                 <div className="col-full">
                     <h3>Portfolio</h3>
@@ -331,7 +333,7 @@ function Works() {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 

@@ -1,24 +1,27 @@
 import React from 'react';
-import { AboutContextType, IAbout } from '../@types/about';
+import { AboutContextType } from '../@types/about';
+import AboutLead from '../atoms/AboutLead';
+import AboutSubTitle from '../atoms/AboutSubTitle';
+import AboutTitle from '../atoms/AboutTitle';
 import { PortfolioContext } from '../context';
+import ColFull from '../templates/ColFull';
+import ColSixTabFullLeft from '../templates/ColSixTabFullLeft';
+import ColSixTabFullRight from '../templates/ColSixTabFullRight';
+import Section from '../templates/Section';
 import Hello from './Hello';
 import Skills from './Skills';
 
-type Props = {
-    about: IAbout;
-};
-
-const About: React.FC<Props> = () => {
+const About = () => {
     const { about } = React.useContext(PortfolioContext) as AboutContextType;
 
     return (
-        <section id="about" className="s-about target-section">
+        <Section id="about" className="s-about">
             <div className="row narrow section-intro has-bottom-sep">
-                <div className="col-full text-center">
-                    <h3>{about.title}</h3>
-                    <h1>{about.title}</h1>
-                    <p className="lead">{about.lead}</p>
-                </div>
+                <ColFull>
+                    <AboutSubTitle content={about.subtitle} />
+                    <AboutTitle content={about.title} />
+                    <AboutLead content={about.lead} />
+                </ColFull>
             </div>
             <div className="row about-content">
                 <Hello />
@@ -26,11 +29,11 @@ const About: React.FC<Props> = () => {
             </div>
 
             <div className="row about-content about-content--buttons">
-                <div className="col-six tab-full left">
+                <ColSixTabFullLeft>
                     <a href="../assets/pdf/Profile.pdf" className="btn btn--primary full-width" download>
                         {about.download}
                     </a>
-                </div>
+                </ColSixTabFullLeft>
             </div>
 
             <div className="row about-content about-content--timeline">
@@ -38,7 +41,7 @@ const About: React.FC<Props> = () => {
                     <h3> {about.myWork}</h3>
                 </div>
 
-                <div className="col-six tab-full left">
+                <ColSixTabFullLeft>
                     <div className="timeline">
                         <div className="timeline__block">
                             <div className="timeline__bullet"></div>
@@ -64,9 +67,9 @@ const About: React.FC<Props> = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </ColSixTabFullLeft>
 
-                <div className="col-six tab-full right">
+                <ColSixTabFullRight>
                     <div className="timeline">
                         <div className="timeline__block">
                             <div className="timeline__bullet"></div>
@@ -92,9 +95,9 @@ const About: React.FC<Props> = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </ColSixTabFullRight>
             </div>
-        </section>
+        </Section>
     );
 };
 

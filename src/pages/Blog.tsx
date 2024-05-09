@@ -1,6 +1,8 @@
+import Section from '../templates/Section';
+
 function Blog() {
     return (
-        <section id="blog" className="s-blog target-section">
+        <Section id="blog" className="s-blog">
             <div className="row narrow section-intro has-bottom-sep">
                 <div className="col-full">
                     <h3>Journal</h3>
@@ -97,7 +99,7 @@ function Blog() {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
 

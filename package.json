@@ -1,90 +1,90 @@
 {
-  "name": "awesome-portifolio",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "build": "tsc && vite build",
-    "commit": "git-cz",
-    "dev": "vite",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "lint:fix": "eslint --fix",
-    "lint": "eslint ./",
-    "lintFix": "eslint ./ --fix",
-    "precommit": "npm run lint:fix",
-    "prepare": "husky install",
-    "prepush": "npm run lint",
-    "preview": "vite preview",
-    "test": "vitest"
-  },
-  "dependencies": {
-    "@nextui-org/react": "^2.3.6",
-    "browserslist": "^4.23.0",
-    "framer-motion": "^11.1.9",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@testing-library/jest-dom": "^6.4.5",
-    "@testing-library/react": "^15.0.7",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.19",
-    "commitizen": "^4.3.0",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "git-cz": "^4.9.0",
-    "husky": "^9.0.11",
-    "jsdom": "^24.0.0",
-    "lint-staged": "^15.2.2",
-    "postcss": "^8.4.38",
-    "prettier": "3.2.5",
-    "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "vitest": "^1.6.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json}": [
-      "npm run format",
-      "npm run lint:fix",
-      "git add -A ."
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test"
+    "name": "awesome-portifolio",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "build": "tsc && vite build",
+        "commit": "git add -A . && git-cz && git push",
+        "dev": "vite",
+        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+        "lint:fix": "eslint --fix",
+        "lint": "eslint ./",
+        "lintFix": "eslint ./ --fix",
+        "precommit": "npm run lint:fix",
+        "prepare": "husky install",
+        "prepush": "npm run lint",
+        "preview": "vite preview",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "@nextui-org/react": "^2.3.6",
+        "browserslist": "^4.23.0",
+        "framer-motion": "^11.1.9",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
+        "@testing-library/jest-dom": "^6.4.5",
+        "@testing-library/react": "^15.0.7",
+        "@testing-library/user-event": "^14.5.2",
+        "@types/react": "^18.3.1",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^7.8.0",
+        "@typescript-eslint/parser": "^7.8.0",
+        "@vitejs/plugin-react": "^4.2.1",
+        "autoprefixer": "^10.4.19",
+        "commitizen": "^4.3.0",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-prettier": "^5.1.3",
+        "eslint-plugin-react": "^7.34.1",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.6",
+        "git-cz": "^4.9.0",
+        "husky": "^9.0.11",
+        "jsdom": "^24.0.0",
+        "lint-staged": "^15.2.2",
+        "postcss": "^8.4.38",
+        "prettier": "3.2.5",
+        "tailwindcss": "^3.4.3",
+        "typescript": "^5.4.5",
+        "vite": "^5.2.11",
+        "vitest": "^1.6.0"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,json}": [
+            "npm run format",
+            "npm run lint:fix",
+            "git add -A ."
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "pre-push": "npm test"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "git-cz"
+        }
     }
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
-  }
 }
