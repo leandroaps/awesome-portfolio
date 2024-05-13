@@ -1,17 +1,23 @@
+import React from 'react';
+import { AppContextType } from '../@types/about';
+import { AppContext } from '../context';
+import RowNarrow from '../templates/RowNarrow';
 import Section from '../templates/Section';
 
 function Contacts() {
+    const { contact } = React.useContext(AppContext) as AppContextType;
+
     return (
         <>
             <Section id="contact" className="s-contact">
                 <div className="overlay"></div>
 
-                <div className="row narrow section-intro">
+                <RowNarrow hasBottomSep={false}>
                     <div className="col-full">
-                        <h3>Contact</h3>
-                        <h1>Say Hello.</h1>
+                        <h3>{contact.subtitle}</h3>
+                        <h1>{contact.title}</h1>
                     </div>
-                </div>
+                </RowNarrow>
 
                 <div className="row contact__main">
                     <div className="col-eight tab-full contact__form">

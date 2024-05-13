@@ -2,14 +2,14 @@ import { NextUIProvider } from '@nextui-org/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import PortfolioProvider from './context/index.tsx';
+import AppProvider from './context/index.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <PortfolioProvider>
+        <AppProvider>
             <NextUIProvider>
                 <App />
             </NextUIProvider>
-        </PortfolioProvider>
+        </AppProvider>
     </React.StrictMode>
 );

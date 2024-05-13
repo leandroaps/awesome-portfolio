@@ -1,42 +1,43 @@
 import React from 'react';
-import { AboutContextType } from '../@types/about';
+import { AppContextType } from '../@types/about';
+import AboutDownloadProfile from '../atoms/AboutDownloadProfile';
 import AboutLead from '../atoms/AboutLead';
 import AboutSubTitle from '../atoms/AboutSubTitle';
 import AboutTitle from '../atoms/AboutTitle';
-import { PortfolioContext } from '../context';
+import { AppContext } from '../context';
 import ColFull from '../templates/ColFull';
 import ColSixTabFullLeft from '../templates/ColSixTabFullLeft';
 import ColSixTabFullRight from '../templates/ColSixTabFullRight';
+import RowContent from '../templates/RowContent';
+import RowNarrow from '../templates/RowNarrow';
 import Section from '../templates/Section';
 import Hello from './Hello';
 import Skills from './Skills';
 
 const About = () => {
-    const { about } = React.useContext(PortfolioContext) as AboutContextType;
+    const { about } = React.useContext(AppContext) as AppContextType;
 
     return (
         <Section id="about" className="s-about">
-            <div className="row narrow section-intro has-bottom-sep">
+            <RowNarrow hasBottomSep={true}>
                 <ColFull>
                     <AboutSubTitle content={about.subtitle} />
                     <AboutTitle content={about.title} />
                     <AboutLead content={about.lead} />
                 </ColFull>
-            </div>
+            </RowNarrow>
             <div className="row about-content">
                 <Hello />
                 <Skills />
             </div>
 
-            <div className="row about-content about-content--buttons">
+            <RowContent section={'about'} classSection={'buttons'}>
                 <ColSixTabFullLeft>
-                    <a href="../assets/pdf/Profile.pdf" className="btn btn--primary full-width" download>
-                        {about.download}
-                    </a>
+                    <AboutDownloadProfile content={about.download} />
                 </ColSixTabFullLeft>
-            </div>
+            </RowContent>
 
-            <div className="row about-content about-content--timeline">
+            <RowContent classSection={'timeline'}>
                 <div className="col-full text-center">
                     <h3> {about.myWork}</h3>
                 </div>
@@ -96,7 +97,7 @@ const About = () => {
                         </div>
                     </div>
                 </ColSixTabFullRight>
-            </div>
+            </RowContent>
         </Section>
     );
 };

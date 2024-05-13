@@ -9,16 +9,27 @@ export interface IAbout {
 }
 
 export interface IHeader {
+    title: string;
+    nav: IHeaderNav[];
+}
+
+export interface IHeaderNav {
     active: boolean;
     content: string;
     href: string;
-    id: number;
+    id?: number;
     title: string;
 }
 
-export type AboutContextType = {
+export interface IContact {
+    title: string;
+    subtitle: string;
+}
+
+export type AppContextType = {
     about: IAbout;
-    header: IHeader[];
+    header: IHeader;
+    contact: IContact;
 
     // saveTodo: (todo: ITodo) => void;
     // updateTodo: (id: number) => void;

@@ -1,9 +1,10 @@
+import RowNarrow from '../templates/RowNarrow';
 import Section from '../templates/Section';
 
 function Works() {
     return (
         <Section id="works" className="s-works">
-            <div className="row narrow section-intro has-bottom-sep">
+            <RowNarrow hasBottomSep={true}>
                 <div className="col-full">
                     <h3>Portfolio</h3>
                     <h1>See My Latest Projects.</h1>
@@ -14,7 +15,7 @@ function Works() {
                         non est in officia.
                     </p>
                 </div>
-            </div>
+            </RowNarrow>
 
             <div className="row masonry-wrap">
                 <div className="masonry">

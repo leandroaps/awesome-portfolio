@@ -1,27 +1,11 @@
-import React from 'react';
-import { AboutContextType, IHeader } from '../@types/about';
-import { PortfolioContext } from '../context';
-import HeaderNavItem from './HeaderNavItems';
+import { ReactNode } from 'react';
 
-const HeaderNavWrap = () => {
-    const { header } = React.useContext(PortfolioContext) as AboutContextType;
+interface Props {
+    children: ReactNode;
+}
 
-    return (
-        <nav className="header-nav-wrap">
-            <ul className="header-nav">
-                {header.map((menu: IHeader) => (
-                    <HeaderNavItem
-                        active={menu.active}
-                        content={menu.content}
-                        href={menu.href}
-                        id={menu.id}
-                        key={menu.href}
-                        title={menu.title}
-                    />
-                ))}
-            </ul>
-        </nav>
-    );
+const HeaderNavWrap = ({ children }: Props) => {
+    return <nav className="header-nav-wrap">{children}</nav>;
 };
 
 export default HeaderNavWrap;

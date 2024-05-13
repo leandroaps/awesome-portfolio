@@ -1,9 +1,10 @@
+import RowNarrow from '../templates/RowNarrow';
 import Section from '../templates/Section';
 
 function Blog() {
     return (
         <Section id="blog" className="s-blog">
-            <div className="row narrow section-intro has-bottom-sep">
+            <RowNarrow hasBottomSep={true}>
                 <div className="col-full">
                     <h3>Journal</h3>
                     <h1>Latest From The Blog.</h1>
@@ -13,7 +14,7 @@ function Blog() {
                         non est in officia.
                     </p>
                 </div>
-            </div>
+            </RowNarrow>
 
             <div className="row blog-content">
                 <div className="col-full">

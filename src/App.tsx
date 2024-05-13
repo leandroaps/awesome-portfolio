@@ -2,11 +2,11 @@ import './assets/css/base.css';
 import './assets/css/main.css';
 import './assets/css/vendor.css';
 
+import Header from './molecules/Header';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contacts from './pages/Contact';
 import Footer from './pages/Footer';
-import Header from './pages/Header';
 import Home from './pages/Home';
 import Preloader from './pages/Preloader';
 import Pswp from './pages/Pswp';

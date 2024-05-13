@@ -1,5 +1,5 @@
 export type Theme = 'light' | 'dark';
-export interface PortfolioContextType {
+export interface AppContextType {
     theme: Theme;
     changeTheme: (theme: Theme) => void;
     state: [
