@@ -19,7 +19,6 @@ export interface IHeader {
 export type AboutContextType = {
     about: IAbout;
     header: IHeader[];
-    setActive: (active: boolean) => void;
 
     // saveTodo: (todo: ITodo) => void;
     // updateTodo: (id: number) => void;

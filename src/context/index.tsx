@@ -51,16 +51,7 @@ const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         }
     ]);
 
-    const setActive = (active: boolean) => {
-        alert('OK');
-        header.filter((item: IHeader) => {
-            if (item.href === id) {
-                item.active = active;
-            }
-        });
-    };
-
-    return <PortfolioContext.Provider value={{ about, header, setActive }}>{children}</PortfolioContext.Provider>;
+    return <PortfolioContext.Provider value={{ about, header }}>{children}</PortfolioContext.Provider>;
 };
 
 export default PortfolioProvider;
