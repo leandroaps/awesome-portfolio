@@ -19,6 +19,7 @@ export interface IHeaderNav {
     href: string;
     id?: number;
     title: string;
+    onClick?: void;
 }
 
 export interface IContact {
@@ -30,6 +31,7 @@ export type AppContextType = {
     about: IAbout;
     header: IHeader;
     contact: IContact;
+    setActive: React.Dispatch<React.SetStateAction<IHeader>>;
 
     // saveTodo: (todo: ITodo) => void;
     // updateTodo: (id: number) => void;

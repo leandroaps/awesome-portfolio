@@ -13,7 +13,7 @@ const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         lorem: 'Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.'
     });
 
-    const [header] = React.useState<IHeader>({
+    const [header, setActive] = React.useState<IHeader>({
         title: 'leandroaps',
         nav: [
             {
@@ -59,7 +59,7 @@ const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         subtitle: 'Contact'
     });
 
-    return <AppContext.Provider value={{ about, header, contact }}>{children}</AppContext.Provider>;
+    return <AppContext.Provider value={{ about, header, contact, setActive }}>{children}</AppContext.Provider>;
 };
 
 export default AppProvider;
