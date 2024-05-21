@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "build": "tsc && vite build",
-        "commit": "git add -A . && git-cz && git push",
+        "commit": "git add . && git-cz && git push",
         "dev": "vite",
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "lint:fix": "eslint --fix",
@@ -69,7 +69,7 @@
         ]
     },
     "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": [
+        "src/**/*.{js,jsx,ts,tsx,json}": [
             "npm run lint:fix",
             "npm run format"
         ]
