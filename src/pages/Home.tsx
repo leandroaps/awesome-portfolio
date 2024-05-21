@@ -1,12 +1,14 @@
 import Title from '../atoms/Title';
 
+import HeroImage from '../assets/images/hero-bg.jpg';
+
 function Home() {
     return (
         <section
             id="home"
             className="s-home page-hero target-section"
             data-parallax="scroll"
-            data-image-src="../assets/images/hero-bg.jpg"
+            data-image-src={HeroImage}
             data-natural-width="3000"
             data-natural-height="2000"
             data-position-y="center"

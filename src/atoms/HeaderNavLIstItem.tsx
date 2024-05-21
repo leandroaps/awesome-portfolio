@@ -4,7 +4,7 @@ import { AppContext } from '../context';
 import HeaderNavItemsContent from './HeaderNavItemsContent';
 
 const HeaderNavLIstItem = ({ active, content, href, title, id }: IHeaderNav) => {
-    const { header, setActive } = useContext(AppContext)!;
+    const { header, setHeader } = useContext(AppContext)!;
     const { nav } = header;
 
     const handleItemClick = (id: number | undefined) => {
@@ -13,7 +13,7 @@ const HeaderNavLIstItem = ({ active, content, href, title, id }: IHeaderNav) => 
             active: item.id === id
         }));
 
-        setActive((prevHeader: Array<string>) => ({
+        setHeader((prevHeader: Array<string>) => ({
             ...prevHeader,
             nav: updatedNav
         }));

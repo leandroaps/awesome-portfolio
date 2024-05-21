@@ -9,5 +9,5 @@ export type AppContextType = {
     header: IHeader;
     contact: IContact;
     skills: ISkills;
-    setActive: React.Dispatch<React.SetStateAction<IHeader>>;
+    setHeader: React.Dispatch<React.SetStateAction<IHeader>>;
 };
