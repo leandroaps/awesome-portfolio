@@ -1,0 +1,40 @@
+{
+    "title": "leandroaps",
+    "nav": [
+        {
+            "active": true,
+            "content": "Home",
+            "href": "home",
+            "title": "Home",
+            "id": 0
+        },
+        {
+            "active": false,
+            "content": "About",
+            "href": "about",
+            "title": "About",
+            "id": 1
+        },
+        {
+            "active": false,
+            "content": "Works",
+            "href": "works",
+            "title": "Works",
+            "id": 2
+        },
+        {
+            "active": false,
+            "content": "Blog",
+            "href": "blog",
+            "title": "Blog",
+            "id": 3
+        },
+        {
+            "active": false,
+            "content": "Contact",
+            "href": "contact",
+            "title": "Contact",
+            "id": 4
+        }
+    ]
+}

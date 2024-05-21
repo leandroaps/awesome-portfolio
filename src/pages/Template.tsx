@@ -1,9 +1,10 @@
+import Title from '../atoms/Title';
 import ColSixTabFullRight from '../templates/ColSixTabFullRight';
 
 function Header() {
     return (
         <ColSixTabFullRight>
-            <h3>I've Got Some skills.</h3>
+            <Title level="h3" content="I've Got Some skills" />
 
             <ul className="skill-bars">
                 <li>

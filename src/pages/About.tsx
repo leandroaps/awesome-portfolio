@@ -1,9 +1,8 @@
 import React from 'react';
-import { AppContextType } from '../@types/about';
+import { AppContextType } from '../@types/context';
 import AboutDownloadProfile from '../atoms/AboutDownloadProfile';
 import AboutLead from '../atoms/AboutLead';
-import AboutSubTitle from '../atoms/AboutSubTitle';
-import AboutTitle from '../atoms/AboutTitle';
+import Title from '../atoms/Title';
 import { AppContext } from '../context';
 import ColFull from '../templates/ColFull';
 import ColSixTabFullLeft from '../templates/ColSixTabFullLeft';
@@ -21,8 +20,8 @@ const About = () => {
         <Section id="about" className="s-about">
             <RowNarrow hasBottomSep={true}>
                 <ColFull>
-                    <AboutSubTitle content={about.subtitle} />
-                    <AboutTitle content={about.title} />
+                    <Title level="h3" content={about.subtitle} />
+                    <Title level="h1" content={about.title} />
                     <AboutLead content={about.lead} />
                 </ColFull>
             </RowNarrow>
@@ -32,14 +31,14 @@ const About = () => {
             </div>
 
             <RowContent section={'about'} classSection={'buttons'}>
-                <ColSixTabFullLeft>
+                <ColFull>
                     <AboutDownloadProfile content={about.download} />
-                </ColSixTabFullLeft>
+                </ColFull>
             </RowContent>
 
             <RowContent classSection={'timeline'}>
                 <div className="col-full text-center">
-                    <h3> {about.myWork}</h3>
+                    <Title level="h3" content={about.myWork} />
                 </div>
 
                 <ColSixTabFullLeft>
@@ -48,8 +47,8 @@ const About = () => {
                             <div className="timeline__bullet"></div>
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">July 2015 - Present</p>
-                                <h3>Awesome Studio</h3>
-                                <h5>Lead Designer</h5>
+                                <Title level="h3" content="Awesome Studio" />
+                                <Title level="h5" content="Lead Designer" />
                             </div>
                             <div className="timeline__desc">
                                 <p>{about.lorem}</p>
@@ -60,8 +59,8 @@ const About = () => {
                             <div className="timeline__bullet"></div>
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">July 2014 - June 2015</p>
-                                <h3>Super Cool Agency</h3>
-                                <h5>Front-end Developer</h5>
+                                <Title level="h3" content="Super Cool Agency" />
+                                <Title level="h4" content="Front-end Developer" />
                             </div>
                             <div className="timeline__desc">
                                 <p>{about.lorem}</p>
@@ -76,8 +75,8 @@ const About = () => {
                             <div className="timeline__bullet"></div>
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">July 2012 - June 2014</p>
-                                <h3>Great Design Studio</h3>
-                                <h5>Web Designer</h5>
+                                <Title level="h3" content="Great Design Studio" />
+                                <Title level="h4" content="Web Designer" />
                             </div>
                             <div className="timeline__desc">
                                 <p>{about.lorem}</p>
@@ -88,8 +87,8 @@ const About = () => {
                             <div className="timeline__bullet"></div>
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">July 2011 - June 2012</p>
-                                <h3>Epic Design Agency</h3>
-                                <h5>Web Designer</h5>
+                                <Title level="h3" content="Epic Design Agency" />
+                                <Title level="h4" content="Web Designer" />
                             </div>
                             <div className="timeline__desc">
                                 <p>{about.lorem}</p>

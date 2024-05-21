@@ -1,3 +1,4 @@
+import Title from '../atoms/Title';
 import RowNarrow from '../templates/RowNarrow';
 import Section from '../templates/Section';
 
@@ -6,8 +7,8 @@ function Works() {
         <Section id="works" className="s-works">
             <RowNarrow hasBottomSep={true}>
                 <div className="col-full">
-                    <h3>Portfolio</h3>
-                    <h1>See My Latest Projects.</h1>
+                    <Title level="h3" content="Portfolio" />
+                    <Title level="h1" content="See My Latest Projects" />
 
                     <p className="lead">
                         Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis
@@ -38,7 +39,7 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">The Beetle</h3>
+                                <Title level="h3" content="The Beetle" className="item-folio__title" />
                                 <p className="item-folio__cat">Web Development</p>
                             </div>
 
@@ -78,7 +79,7 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">Lighthouse</h3>
+                                <Title level="h3" content="Lighthouse" className="item-folio__title" />
                                 <p className="item-folio__cat">Web Design</p>
                             </div>
 
@@ -117,7 +118,8 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">Salad</h3>
+                                <Title level="h3" content="Salad" className="item-folio__title" />
+
                                 <p className="item-folio__cat">Branding</p>
                             </div>
 
@@ -156,7 +158,8 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">Woodcraft</h3>
+                                <Title level="h3" content="Woodcraft" className="item-folio__title" />
+
                                 <p className="item-folio__cat">Branding</p>
                             </div>
 
@@ -195,7 +198,8 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">Skaterboy</h3>
+                                <Title level="h3" content="Skaterboy" className="item-folio__title" />
+
                                 <p className="item-folio__cat">Web Development</p>
                             </div>
 
@@ -234,7 +238,8 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">Minimalismo</h3>
+                                <Title level="h3" content="Minimalismo" className="item-folio__title" />
+
                                 <p className="item-folio__cat">Web Design</p>
                             </div>
 
@@ -273,7 +278,8 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">Liberty</h3>
+                                <Title level="h3" content="Liberty" className="item-folio__title" />
+
                                 <p className="item-folio__cat">Branding</p>
                             </div>
 
@@ -312,7 +318,8 @@ function Works() {
                             </div>
 
                             <div className="item-folio__text">
-                                <h3 className="item-folio__title">Lady Shutterbug</h3>
+                                <Title level="h3" content="Lady Shutterbug" className="item-folio__title" />
+
                                 <p className="item-folio__cat">Branding</p>
                             </div>
 

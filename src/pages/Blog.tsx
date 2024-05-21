@@ -1,3 +1,4 @@
+import Title from '../atoms/Title';
 import RowNarrow from '../templates/RowNarrow';
 import Section from '../templates/Section';
 
@@ -6,8 +7,8 @@ function Blog() {
         <Section id="blog" className="s-blog">
             <RowNarrow hasBottomSep={true}>
                 <div className="col-full">
-                    <h3>Journal</h3>
-                    <h1>Latest From The Blog.</h1>
+                    <Title level="h3" content="Journal" />
+                    <Title level="h1" content="Latest From The Blog" />
                     <p className="lead">
                         Lorem ipsum Dolor adipisicing nostrud et aute. Excepteur amet commodo ea dolore irure esse Duis
                         nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum

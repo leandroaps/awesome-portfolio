@@ -1,7 +1,9 @@
+import Title from '../atoms/Title';
+
 function Hello() {
     return (
         <div className="col-six tab-full left">
-            <h3>Howdy!</h3>
+            <Title level="h3" content="Howdy!" />
 
             <p>
                 Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud mollit

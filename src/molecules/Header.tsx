@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppContextType } from '../@types/about';
+import { AppContextType } from '../@types/context';
 import HeaderContent from '../atoms/HeaderContent';
 import HeaderLogo from '../atoms/HeaderLogo';
 import HeaderMenuToggle from '../atoms/HeaderMenuToggle';

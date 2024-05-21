@@ -1,3 +1,5 @@
+import Title from '../atoms/Title';
+
 function Testimonials() {
     return (
         <div className="s-testimonials">
@@ -5,7 +7,7 @@ function Testimonials() {
 
             <div className="row testimonials-header">
                 <div className="col-full">
-                    <h1 className="h02">What People Say.</h1>
+                    <Title level="h1" content="What People Say" className="h02" />
                 </div>
             </div>
 

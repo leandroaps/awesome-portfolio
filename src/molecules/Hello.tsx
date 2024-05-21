@@ -1,11 +1,11 @@
 import HelloContent from '../atoms/HelloContent';
-import HelloTitle from '../atoms/HelloTitle';
+import Title from '../atoms/Title';
 import ColSixTabFullLeft from '../templates/ColSixTabFullLeft';
 
 function Hello() {
     return (
         <ColSixTabFullLeft>
-            <HelloTitle />
+            <Title level="h3" content="Howdy!" />
             <HelloContent />
         </ColSixTabFullLeft>
     );

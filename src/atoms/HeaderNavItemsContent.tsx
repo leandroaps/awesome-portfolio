@@ -1,4 +1,4 @@
-import { IHeaderNav } from '../@types/about';
+import { IHeaderNav } from '../@types/header';
 
 const HeaderNavItemsContent = ({ content, href, title }: IHeaderNav) => {
     return (

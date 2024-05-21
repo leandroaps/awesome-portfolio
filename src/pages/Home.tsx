@@ -1,3 +1,5 @@
+import Title from '../atoms/Title';
+
 function Home() {
     return (
         <section
@@ -14,8 +16,8 @@ function Home() {
 
             <div className="home-content">
                 <div className="row home-content__main">
-                    <h3>Hello There</h3>
-                    <h1>I am Leandro A. Siqueira.</h1>
+                    <Title level="h3" content="Hello There" />
+                    <Title level="h1" content="I am Leandro A. Siqueira." />
                     <h2>
                         I am a Front-end Developer focused on React <br />
                         based in São Paulo, Brazil.

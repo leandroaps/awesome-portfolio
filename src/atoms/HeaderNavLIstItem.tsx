@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { IHeaderNav } from '../@types/about';
+import { IHeaderNav } from '../@types/header';
 import { AppContext } from '../context';
 import HeaderNavItemsContent from './HeaderNavItemsContent';
 
@@ -8,12 +8,12 @@ const HeaderNavLIstItem = ({ active, content, href, title, id }: IHeaderNav) => 
     const { nav } = header;
 
     const handleItemClick = (id: number | undefined) => {
-        const updatedNav = nav.map((item) => ({
+        const updatedNav = nav.map((item: { id: number | undefined }) => ({
             ...item,
             active: item.id === id
         }));
 
-        setActive((prevHeader) => ({
+        setActive((prevHeader: Array<string>) => ({
             ...prevHeader,
             nav: updatedNav
         }));
@@ -21,7 +21,7 @@ const HeaderNavLIstItem = ({ active, content, href, title, id }: IHeaderNav) => 
 
     return (
         <li className={`${active && 'current'}`} onClick={() => handleItemClick(id)}>
-            <HeaderNavItemsContent active={active} content={content} href={href} title={title} />
+            <HeaderNavItemsContent active={active} content={content} href={href} title={title} key={id} />
         </li>
     );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
-import { AppContextType } from '../@types/about';
+import { AppContextType } from '../@types/context';
+import Title from '../atoms/Title';
 import { AppContext } from '../context';
 import RowNarrow from '../templates/RowNarrow';
 import Section from '../templates/Section';
@@ -14,8 +15,8 @@ function Contacts() {
 
                 <RowNarrow hasBottomSep={false}>
                     <div className="col-full">
-                        <h3>{contact.subtitle}</h3>
-                        <h1>{contact.title}</h1>
+                        <Title level="h3" content={contact.subtitle} />
+                        <Title level="h1" content={contact.title} />
                     </div>
                 </RowNarrow>
 
@@ -100,13 +101,15 @@ function Contacts() {
                         </div>
                     </div>
                     <div className="col-four tab-full contact__infos">
-                        <h4 className="h06">Phone</h4>
+                        <Title level="h4" content="Phone" className="h06" />
                         <p>Mobile: (+55) 19 99111 2239</p>
 
-                        <h4 className="h06">Email</h4>
+                        <Title level="h4" content="Email" className="h06" />
+
                         <p>leandroaps@gmail.com</p>
 
-                        <h4 className="h06">Address</h4>
+                        <Title level="h4" content="Address" className="h06" />
+
                         <p>
                             Campinas - São Paulo
                             <br />
