@@ -52,6 +52,8 @@ const About = () => {
                             </div>
                             <div className="timeline__desc">
                                 <p>{about.lorem}</p>
+                                <p>{about.lorem}</p>
+                                <p>{about.lorem}</p>
                             </div>
                         </div>
 
