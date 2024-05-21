@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "build": "tsc && vite build",
-        "commit": "git add . && git-cz && git push",
+        "commit": "git-cz",
         "dev": "vite",
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
         "lint:fix": "eslint --fix",
@@ -76,6 +76,7 @@
     },
     "husky": {
         "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
             "pre-commit": "npm run precommit"
         }
     },
