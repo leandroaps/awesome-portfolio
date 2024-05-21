@@ -7,7 +7,7 @@
         "build": "tsc && vite build",
         "commit": "git add . && git-cz && git push",
         "dev": "vite",
-        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
         "lint:fix": "eslint --fix",
         "lint": "eslint ./",
         "lintFix": "eslint ./ --fix",
@@ -70,8 +70,8 @@
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx,json}": [
-            "npm run lint:fix",
-            "npm run format"
+            "eslint ./ --fix",
+            "prettier --write"
         ]
     },
     "husky": {
