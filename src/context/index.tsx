@@ -1,41 +1,21 @@
-import React, { ReactNode, useEffect, useMemo, useState } from 'react';
+import React, { ReactNode, useMemo, useState } from 'react';
 import { IAbout } from '../@types/about';
 import { IContact } from '../@types/contact';
 import { AppContextType } from '../@types/context';
 import { IHeader } from '../@types/header';
 import { ISkills } from '../@types/skills';
-
 import ABOUT_DATA from '../data/about.json';
 import CONTACT_DATA from '../data/contact.json';
 import HEADER_DATA from '../data/header.json';
 import SKILLS_DATA from '../data/skills.json';
 
-import axios from 'axios';
-
 export const AppContext = React.createContext<AppContextType | null>(null);
-
-const fetchData = async () => {
-    try {
-        // Fetch data from your backend server
-        const [headerResponse, aboutResponse, contactResponse, skillsResponse] = await Promise.all([
-            axios.get('/api/header')
-        ]);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        // Handle error
-    }
-};
 
 const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [header, setHeader] = useState<IHeader>(HEADER_DATA);
-
     const about = useMemo(() => ABOUT_DATA as IAbout, []);
     const contact = useMemo(() => CONTACT_DATA as IContact, []);
     const skills = useMemo(() => SKILLS_DATA as ISkills, []);
-
-    useEffect(() => {
-        fetchData();
-    }, []);
 
     const value = useMemo(
         () => ({
