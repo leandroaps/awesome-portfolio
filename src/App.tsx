@@ -2,7 +2,7 @@ import './assets/css/base.css';
 import './assets/css/main.css';
 import './assets/css/vendor.css';
 
-import Header from './molecules/Header';
+import Header from './organisms/Header';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contacts from './pages/Contact';
